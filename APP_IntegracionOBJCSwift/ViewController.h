@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *mySaludoLBL;
+
+- (IBAction)muestraSaludo:(id)sender;
 
 @end
 

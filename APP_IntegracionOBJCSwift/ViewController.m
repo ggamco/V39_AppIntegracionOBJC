@@ -14,8 +14,20 @@
 
 @implementation ViewController
 
+#pragma mark - LIFE VC
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Hola" message:@"Mundo" preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:Nil]];
+    
+    [self.navigationController presentViewController:alert animated:YES completion:Nil];
+    
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,4 +38,9 @@
 }
 
 
+- (IBAction)muestraSaludo:(id)sender {
+    
+    _mySaludoLBL.text = @"Hola en OBJC de ios Marcianos";
+    
+}
 @end

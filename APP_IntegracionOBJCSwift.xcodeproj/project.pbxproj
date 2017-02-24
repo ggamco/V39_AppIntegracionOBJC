@@ -13,6 +13,8 @@
 		09A939FE1E60B1970045B8EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A939FC1E60B1970045B8EB /* Main.storyboard */; };
 		09A93A001E60B1970045B8EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A939FF1E60B1970045B8EB /* Assets.xcassets */; };
 		09A93A031E60B1970045B8EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A93A011E60B1970045B8EB /* LaunchScreen.storyboard */; };
+		09A93A0C1E60B8E20045B8EB /* SeundaVentanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A93A0B1E60B8E20045B8EB /* SeundaVentanaViewController.swift */; };
+		09A93A0F1E60BA610045B8EB /* DatosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A93A0E1E60BA610045B8EB /* DatosModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		09A939FF1E60B1970045B8EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A93A021E60B1970045B8EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09A93A041E60B1970045B8EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09A93A0A1E60B8E20045B8EB /* APP_IntegracionOBJCSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APP_IntegracionOBJCSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		09A93A0B1E60B8E20045B8EB /* SeundaVentanaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeundaVentanaViewController.swift; sourceTree = "<group>"; };
+		09A93A0D1E60BA610045B8EB /* DatosModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatosModel.h; sourceTree = "<group>"; };
+		09A93A0E1E60BA610045B8EB /* DatosModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatosModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +68,15 @@
 				09A939F71E60B1970045B8EB /* AppDelegate.m */,
 				09A939F91E60B1970045B8EB /* ViewController.h */,
 				09A939FA1E60B1970045B8EB /* ViewController.m */,
+				09A93A0D1E60BA610045B8EB /* DatosModel.h */,
+				09A93A0E1E60BA610045B8EB /* DatosModel.m */,
+				09A93A0B1E60B8E20045B8EB /* SeundaVentanaViewController.swift */,
 				09A939FC1E60B1970045B8EB /* Main.storyboard */,
 				09A939FF1E60B1970045B8EB /* Assets.xcassets */,
 				09A93A011E60B1970045B8EB /* LaunchScreen.storyboard */,
 				09A93A041E60B1970045B8EB /* Info.plist */,
 				09A939F31E60B1970045B8EB /* Supporting Files */,
+				09A93A0A1E60B8E20045B8EB /* APP_IntegracionOBJCSwift-Bridging-Header.h */,
 			);
 			path = APP_IntegracionOBJCSwift;
 			sourceTree = "<group>";
@@ -110,6 +120,7 @@
 				TargetAttributes = {
 					09A939EF1E60B1970045B8EB = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -150,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A93A0C1E60B8E20045B8EB /* SeundaVentanaViewController.swift in Sources */,
 				09A939FB1E60B1970045B8EB /* ViewController.m in Sources */,
+				09A93A0F1E60BA610045B8EB /* DatosModel.m in Sources */,
 				09A939F81E60B1970045B8EB /* AppDelegate.m in Sources */,
 				09A939F51E60B1970045B8EB /* main.m in Sources */,
 			);
@@ -270,10 +283,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = APP_IntegracionOBJCSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cice.gmbdesign.objc.APP-IntegracionOBJCSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "APP_IntegracionOBJCSwift/APP_IntegracionOBJCSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -281,10 +298,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = APP_IntegracionOBJCSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cice.gmbdesign.objc.APP-IntegracionOBJCSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "APP_IntegracionOBJCSwift/APP_IntegracionOBJCSwift-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
